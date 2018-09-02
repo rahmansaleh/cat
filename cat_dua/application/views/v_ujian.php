@@ -388,6 +388,7 @@
     }
 
     simpan_akhir = function() {
+        simpan();
         if (confirm('Ujian telah selesai. Anda yakin akan mengakhiri tes ini..?')) {
             simpan();
             $.ajax({

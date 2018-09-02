@@ -1307,6 +1307,10 @@ class Adm extends CI_Controller {
 			j($a);
 			exit;		
 		} else if ($uri3 == "token") {
+			header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+			header("Cache-Control: post-check=0, pre-check=0", false);
+			header("Pragma: no-cache");
+			
 			$a['du'] = $this->db->query("SELECT a.id, a.tgl_mulai, a.terlambat, 
 										a.token, a.nama_ujian, a.jumlah_soal, a.waktu,
 										b.nama nmguru, c.nama nmmapel,
@@ -1340,6 +1344,12 @@ class Adm extends CI_Controller {
 				redirect('adm/ikuti_ujian');
 			}
 		} else {
+			
+			header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+			header("Cache-Control: post-check=0, pre-check=0", false);
+			header("Pragma: no-cache");
+			
+			
 			$cek_sdh_selesai= $this->db->query("SELECT id FROM tr_ikut_ujian WHERE id_tes = '$uri4' AND id_user = '".$a['sess_konid']."' AND status = 'N'")->num_rows();
 			
 			//sekalian validasi waktu sudah berlalu...

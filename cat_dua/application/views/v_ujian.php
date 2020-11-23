@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"><i class="glyphicon glyphicon-globe"></i> Ujian Online</a>
+            <a class="navbar-brand"><i class="glyphicon glyphicon-globe"></i>RSUD TA - CAT ujian</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar">

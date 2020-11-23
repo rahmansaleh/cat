@@ -1,6 +1,6 @@
 <div class="row col-md-12 ini_bodi">
     <div class="panel panel-info">
-        <div class="panel-heading">Import Data Siswa
+        <div class="panel-heading">Import Data Pelamar
         </div>
         <div class="panel-body">
             <form name="f_siswa" action="<?php echo base_url(); ?>import/siswa" id="f_siswa" enctype="multipart/form-data" method="post">

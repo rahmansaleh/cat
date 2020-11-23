@@ -1,6 +1,6 @@
 <div class="row col-md-12 ini_bodi">
   <div class="panel panel-info">
-    <div class="panel-heading">Data Siswa
+    <div class="panel-heading">Data Pelamar
       <div class="tombol-kanan">
         <a class="btn btn-success btn-sm tombol-kanan" href="#" onclick="return m_siswa_e(0);"><i class="glyphicon glyphicon-plus"></i> &nbsp;&nbsp;Tambah</a>        
         <a class="btn btn-warning btn-sm tombol-kanan" href="<?php echo base_url(); ?>upload/format_import_siswa.xlsx" ><i class="glyphicon glyphicon-download"></i> &nbsp;&nbsp;Download Format Import</a>
@@ -8,14 +8,14 @@
       </div>
     </div>
     <div class="panel-body">
-      <a href="#" onclick="return aktifkan_semua_siswa();" class="btn btn-info" style="margin-bottom: 10px"><i class="fa fa-users"></i> Aktifkan semua siswa</a>
+      <!-- <a href="#" onclick="return aktifkan_semua_siswa();" class="btn btn-info" style="margin-bottom: 10px"><i class="fa fa-users"></i> Aktifkan semua siswa</a> -->
       <table class="table table-bordered" id="datatabel">
         <thead>
           <tr>
             <th width="5%">No</th>
             <th width="25%">Nama</th>
-            <th width="15%">NIM / Username</th>
-            <th width="20%">Kelas / Jurusan</th>
+            <th width="15%">ID</th>
+            <th width="20%">Tipe Soal Tertuju</th>
             <th width="35%">Aksi</th>
           </tr>
         </thead>
@@ -40,8 +40,8 @@
             <input type="hidden" name="id" id="id" value="0">
               <table class="table table-form">
                 <tr><td style="width: 25%">Nama</td><td style="width: 75%"><input type="text" class="form-control" name="nama" id="nama" required></td></tr>
-                <tr><td style="width: 25%">NIM</td><td style="width: 75%"><input type="text" class="form-control" name="nim" id="nim" required></td></tr>
-                <tr><td style="width: 25%">Jurusan</td><td style="width: 75%"><input type="text" class="form-control" name="jurusan" id="jurusan" required></td></tr>
+                <tr><td style="width: 25%">ID</td><td style="width: 75%"><input type="text" class="form-control" name="nim" id="nim" required></td></tr>
+                <tr><td style="width: 25%">Tipe Soal Tertuju</td><td style="width: 75%"><input type="text" class="form-control" name="jurusan" id="jurusan" required></td></tr>
               </table>
       </div>
       <div class="modal-footer">

@@ -1,6 +1,6 @@
 <div class="row col-md-12 ini_bodi">
   <div class="panel panel-info">
-    <div class="panel-heading">Data Guru
+    <div class="panel-heading">Data Pengawas
       <div class="tombol-kanan">
         <a class="btn btn-success btn-sm tombol-kanan" href="#" onclick="return m_guru_e(0);"><i class="glyphicon glyphicon-plus"></i> &nbsp;&nbsp;Tambah</a>       
         <a class="btn btn-warning btn-sm tombol-kanan" href="<?php echo base_url(); ?>upload/format_import_guru.xlsx" ><i class="glyphicon glyphicon-download"></i> &nbsp;&nbsp;Download Format Import</a>
@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="panel-body">
-      <a href="#" onclick="return aktifkan_semua_guru();" class="btn btn-info" style="margin-bottom: 10px"><i class="fa fa-users"></i> Aktifkan semua guru</a>
+      <!-- <a href="#" onclick="return aktifkan_semua_guru();" class="btn btn-info" style="margin-bottom: 10px"><i class="fa fa-users"></i> Aktifkan semua guru</a> -->
       <table class="table table-bordered" id="datatabel">
         <thead>
           <tr>

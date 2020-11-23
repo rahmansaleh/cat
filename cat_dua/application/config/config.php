@@ -9,7 +9,7 @@ $uri_js = count($pc_root) - 2;
 $config['jml_opsi']			= 4;			//isi dengan pilihan opsi jawaban, HARUS <= 5
 $config['uri_js']			= $uri_js;		
 $config['editor_style']		= "replace";	//pilihannya "inline" atau "replace";
-$config['nama_aplikasi']	= "CAT - Computer Assisted Test";
+$config['nama_aplikasi']	= "RSUD TA - CAT";
 $config['versi']			= "2.0";
 $config['tgl']				= "27012017";
 $config['tampil_nilai']		= TRUE; // jika siswa boleh melihat hasil ujian, isikan TRUE, jika tidak FALSE, default TRUE

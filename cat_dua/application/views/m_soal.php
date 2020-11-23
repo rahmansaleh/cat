@@ -21,7 +21,7 @@ $uri4 = $this->uri->segment(4);
             <tr>
               <td width="5%">No</td>
               <td width="50%">Soal</td>
-              <td width="15%">Mapel/Guru</td>
+              <td width="15%">Tipe Soal Tertuju / Pengawas</td>
               <td width="15%">Analisa</td>
               <td width="15%">Aksi</td>
             </tr>

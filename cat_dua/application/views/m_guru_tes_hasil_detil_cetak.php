@@ -11,8 +11,8 @@
 
 <h4>Detil Ujian</h4>
 <table class="table-bordered" style="margin-bottom: 0px">
-  <tr><td width="30%">Mata Pelajaran</td><td><b><?php echo $detil_tes->namaMapel; ?></b></td></tr>
-  <tr><td>Nama Guru</td><td width="70%"><b><?php echo $detil_tes->nama_guru; ?></b></td></tr>
+  <tr><td width="30%">Tipe Soal Tertuju</td><td><b><?php echo $detil_tes->namaMapel; ?></b></td></tr>
+  <tr><td>Pengawas</td><td width="70%"><b><?php echo $detil_tes->nama_guru; ?></b></td></tr>
   <tr><td>Nama Ujian</td><td width="70%"><b><?php echo $detil_tes->nama_ujian; ?></b></td></tr>
   <tr><td>Jumlah Soal</td><td><b><?php echo $detil_tes->jumlah_soal; ?></b></td></td></tr>
   <tr><td>Waktu</td><td><b><?php echo $detil_tes->waktu; ?> menit</b></td></tr>
@@ -26,7 +26,7 @@
   <thead>
     <tr>
       <th width="5%">No</th>
-      <th width="50%">Nama Peserta</th>
+      <th width="50%">Nama Pelamar</th>
       <th width="15%">Jumlah Benar</th>
       <th width="15%">Nilai</th>
       <th width="15%">Nilai Bobot</th>

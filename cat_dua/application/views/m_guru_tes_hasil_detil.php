@@ -14,8 +14,8 @@ $uri4 = $this->uri->segment(4);
       <div class="col-lg-12 alert alert-warning" style="margin-bottom: 20px">
         <div class="col-md-6">
             <table class="table table-bordered" style="margin-bottom: 0px">
-              <tr><td>Mata Kuliah</td><td><?php echo $detil_tes->namaMapel; ?></td></tr>
-              <tr><td>Nama Guru</td><td><?php echo $detil_tes->nama_guru; ?></td></tr>
+              <tr><td>Tipe Soal Tertuju</td><td><?php echo $detil_tes->namaMapel; ?></td></tr>
+              <tr><td>Pengawas</td><td><?php echo $detil_tes->nama_guru; ?></td></tr>
               <tr><td width="30%">Nama Ujian</td><td width="70%"><?php echo $detil_tes->nama_ujian; ?></td></tr>
               <tr><td>Waktu</td><td><?php echo $detil_tes->waktu; ?> menit</td></tr>
             </table>
@@ -36,7 +36,7 @@ $uri4 = $this->uri->segment(4);
         <thead>
           <tr>
             <th width="5%">No</th>
-            <th width="40%">Nama Peserta</th>
+            <th width="40%">Nama Pelamar</th>
             <th width="15%">Jumlah Benar</th>
             <th width="15%">Nilai</th>
             <th width="15%">Nilai Bobot</th>

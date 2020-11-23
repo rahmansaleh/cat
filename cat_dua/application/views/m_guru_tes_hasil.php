@@ -10,8 +10,8 @@
           <tr>
             <th width="5%">No</th>
             <th width="20%">Nama Tes</th>
-            <th width="25%">Nama Guru</th>
-            <th width="20%">Mata Pelajaran</th>
+            <th width="25%">Pengawas</th>
+            <th width="20%">Tipe Soal Tertuju</th>
             <th width="10%">Jumlah Soal</th>
             <th width="10%">Waktu</th>
             <th width="10%">Aksi</th>

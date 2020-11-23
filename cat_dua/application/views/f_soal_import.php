@@ -6,10 +6,10 @@
             <form name="f_siswa" action="<?php echo base_url(); ?>import/soal" id="f_siswa" enctype="multipart/form-data" method="post">
                 <input type="hidden" name="id" id="id" value="0">
                 <table class="table table-form">
-                    <tr><td style="width: 25%">Guru</td><td style="width: 75%">
+                    <tr><td style="width: 25%">Pengawas</td><td style="width: 75%">
                     <?php echo form_dropdown('id_guru', $p_guru, '', 'class="form-control" id="id_guru" required'); ?>
                     </td></tr>
-                    <tr><td>Mapel</td><td><?php echo form_dropdown('id_mapel', $p_mapel, '', 'class="form-control" id="id_mapel" required'); ?></td></tr>
+                    <tr><td>Tipe Soal Tertuju</td><td><?php echo form_dropdown('id_mapel', $p_mapel, '', 'class="form-control" id="id_mapel" required'); ?></td></tr>
 
                     <tr><td>File</td><td><input type="file" class="form-control col-md-3" name="import_excel" required></td></tr>
                     <tr><td></td><td>

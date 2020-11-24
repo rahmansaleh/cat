@@ -1210,6 +1210,7 @@ class Adm extends CI_Controller {
 									INNER JOIN m_mapel b ON a.id_mapel = b.id
 									INNER JOIN m_guru c ON a.id_guru = c.id
 									LEFT JOIN tr_ikut_ujian d ON CONCAT('".$a['sess_konid']."',a.id) = CONCAT(d.id_user,d.id_tes)
+									WHERE b.nama = '".$this->session->userdata('jurusan_siswa')."'
 									ORDER BY a.id ASC")->result();
 		//echo $this->db->last_query();
 		$a['p']	= "m_list_ujian_siswa";
@@ -1571,10 +1572,12 @@ class Adm extends CI_Controller {
 		$_log		= array();
 		if ($j_data === 1) {
 			$sess_nama_user = "";
+			$sess_jurusan_user = "";
 			if ($a_data->level == "siswa") {
-				$det_user = $this->db->query("SELECT nama FROM m_siswa WHERE id = '".$a_data->kon_id."'")->row();
+				$det_user = $this->db->query("SELECT nama, jurusan FROM m_siswa WHERE id = '".$a_data->kon_id."'")->row();
 				if (!empty($det_user)) {
 					$sess_nama_user = $det_user->nama;
+					$sess_jurusan_user = $det_user->jurusan;
 				}
 			} else if ($a_data->level == "guru") {
 				$det_user = $this->db->query("SELECT nama FROM m_guru WHERE id = '".$a_data->kon_id."'")->row();
@@ -1590,7 +1593,8 @@ class Adm extends CI_Controller {
                     'admin_level' => $a_data->level,
                     'admin_konid' => $a_data->kon_id,
                     'admin_nama' => $sess_nama_user,
-					'admin_valid' => true
+					'admin_valid' => true,
+					'jurusan_siswa' => $sess_jurusan_user,
                     );
             $this->session->set_userdata($data);
 			$_log['log']['status']			= "1";

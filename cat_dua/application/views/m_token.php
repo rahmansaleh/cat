@@ -4,7 +4,6 @@
 
     <div class="panel-body">
       <input type="hidden" name="id_ujian" id="id_ujian" value="<?php echo $du['id']; ?>">
-      <input type="hidden" name="_token" id="_token" value="<?php echo $du['token']; ?>">
       <input type="hidden" name="_tgl_sekarang" id="_tgl_sekarang" value="<?php echo date('Y-m-d H:i:s'); ?>">
       <input type="hidden" name="_tgl_mulai" id="_tgl_mulai" value="<?php echo $tgl_mulai; ?>">
       <input type="hidden" name="_terlambat" id="_terlambat" value="<?php echo $terlambat; ?>">
@@ -19,7 +18,6 @@
               <tr><td>Nama Ujian</td><td><?php echo $du['nama_ujian']; ?></td></tr>
               <tr><td>Jml Soal</td><td><?php echo $du['jumlah_soal']; ?></td></tr>
               <tr><td>Waktu</td><td><?php echo $du['waktu']; ?> menit</td></tr>
-              <tr><td>Token</td><td><input type="text" name="token" id="token" required="true" class="form-control col-md-3"></td></tr>
             </table>
           </div>
         </div>

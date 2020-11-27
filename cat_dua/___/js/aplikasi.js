@@ -64,7 +64,7 @@ function timer() {
 	statuse = parseInt(statuse);
 
 	if (statuse == 1) {
-		$("#btn_mulai").html('<a href="#" class="btn btn-success btn-lg" id="tbl_mulai" onclick="return konfirmasi_token('+id_ujian+')"><i class="fa fa-check-circle"></i> MULAI</a>');
+		$("#btn_mulai").html('<a href="#" class="btn btn-success btn-lg" id="tbl_mulai" onclick="return mulai_ujian('+id_ujian+')"><i class="fa fa-check-circle"></i> MULAI</a>');
 		
 		$('#waktu_akhir_ujian').countdowntimer({
 	        startDate : tgl_sekarang,
@@ -92,7 +92,7 @@ function timer() {
 
 function timeIsUp() {
 	var id_ujian = $("#id_ujian").val();
-	$("#btn_mulai").html('<a href="#" class="btn btn-success btn-lg" id="tbl_mulai" onclick="return konfirmasi_token('+id_ujian+')"><i class="fa fa-check-circle"></i> MULAI</a>');
+	$("#btn_mulai").html('<a href="#" class="btn btn-success btn-lg" id="tbl_mulai" onclick="return mulai_ujian('+id_ujian+')"><i class="fa fa-check-circle"></i> MULAI</a>');
 
 	var tgl_sekarang = $("#_tgl_sekarang").val();
 	var tgl_mulai = $("#_tgl_mulai").val();
@@ -166,19 +166,14 @@ function login(e) {
 =======================================
 =======================================
 */
-function konfirmasi_token(id) {
-	var token_asli = $("#_token").val();
-	var token_input = $("#token").val();
 
-	if (token_asli != token_input) {
-		alert("Token salah..!");
-		return false;
-	} else {
-		alert("Token benar..!");
+function mulai_ujian(id) {
+
+	if(confirm('Ujian akan segera dimulai. Anda yakin ingin melanjutkan ?')) {
+
 		window.location.assign(base_url+"adm/ikut_ujian/_/"+id); 
 	}
 }
-
 
 function m_soal_h(id) {
 	if (confirm('Anda yakin..?')) {

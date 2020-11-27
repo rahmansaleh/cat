@@ -985,7 +985,7 @@ class Adm extends CI_Controller {
                 
 		            $data_ok = array();
 		            $data_ok[0] = $no++;
-		            $data_ok[1] = $d['nama_ujian']."<br>Token : <b>".$d['token']."</b> &nbsp;&nbsp; <a href='#' onclick='return refresh_token(".$d['id'].")' title='Perbarui Token'><i class='fa fa-refresh'></i></a>";
+		            $data_ok[1] = $d['nama_ujian'];
 		            $data_ok[2] = $d['mapel'];
 		            $data_ok[3] = $d['jumlah_soal'];
 		            $data_ok[4] = tjs($d['tgl_mulai'],"s")."<br>(".$d['waktu']." menit)";
@@ -1313,7 +1313,7 @@ class Adm extends CI_Controller {
 			header("Pragma: no-cache");
 			
 			$a['du'] = $this->db->query("SELECT a.id, a.tgl_mulai, a.terlambat, 
-										a.token, a.nama_ujian, a.jumlah_soal, a.waktu,
+										a.nama_ujian, a.jumlah_soal, a.waktu,
 										b.nama nmguru, c.nama nmmapel,
 										(case
 											when (now() < a.tgl_mulai) then 0

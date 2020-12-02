@@ -1174,7 +1174,7 @@ class Adm extends CI_Controller {
 		$a['statistik'] = $this->db->query("SELECT MAX(nilai) AS max_, MIN(nilai) AS min_, AVG(nilai) AS avg_ 
 										FROM tr_ikut_ujian
 										WHERE tr_ikut_ujian.id_tes = '$uri3'")->row();
-		$a['hasil'] = $this->db->query("SELECT m_siswa.nama, tr_ikut_ujian.nilai, tr_ikut_ujian.jml_benar, tr_ikut_ujian.nilai_bobot
+		$a['hasil'] = $this->db->query("SELECT m_siswa.nim, m_siswa.nama, tr_ikut_ujian.nilai, tr_ikut_ujian.jml_benar, tr_ikut_ujian.nilai_bobot
 										FROM tr_ikut_ujian
 										INNER JOIN m_siswa ON tr_ikut_ujian.id_user = m_siswa.id
 										WHERE tr_ikut_ujian.id_tes = '$uri3'")->result();

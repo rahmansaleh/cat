@@ -26,7 +26,8 @@
   <thead>
     <tr>
       <th width="5%">No</th>
-      <th width="50%">Nama Pelamar</th>
+      <th width="20%">No. KTP</th>
+      <th width="30%">Nama Pelamar</th>
       <th width="15%">Jumlah Benar</th>
       <th width="15%">Nilai</th>
       <th width="15%">Nilai Bobot</th>
@@ -40,6 +41,7 @@
         foreach ($hasil as $d) {
           echo '<tr>
                 <td class="ctr">'.$no.'</td>
+                <td>'.$d->nim.'</td>
                 <td>'.$d->nama.'</td>
                 <td class="ctr">'.$d->jml_benar.'</td>
                 <td class="ctr">'.$d->nilai.'</td>

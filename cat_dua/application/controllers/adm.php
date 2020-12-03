@@ -1078,7 +1078,7 @@ class Adm extends CI_Controller {
 				FROM tr_ikut_ujian a
 				INNER JOIN m_siswa b ON a.id_user = b.id
 				WHERE a.id_tes = '$uri4' 
-				AND b.nama LIKE '%".$search['value']."%' ORDER BY a.id DESC LIMIT ".$start.", ".$length."")->result_array();
+				AND b.nama LIKE '%".$search['value']."%' ORDER BY a.nilai DESC LIMIT ".$start.", ".$length."")->result_array();
 
 	        $data = array();
 	        $no = ($start+1);

@@ -1177,7 +1177,7 @@ class Adm extends CI_Controller {
 		$a['hasil'] = $this->db->query("SELECT m_siswa.nim, m_siswa.nama, tr_ikut_ujian.nilai, tr_ikut_ujian.jml_benar, tr_ikut_ujian.nilai_bobot
 										FROM tr_ikut_ujian
 										INNER JOIN m_siswa ON tr_ikut_ujian.id_user = m_siswa.id
-										WHERE tr_ikut_ujian.id_tes = '$uri3'")->result();
+										WHERE tr_ikut_ujian.id_tes = '$uri3' ORDER BY  tr_ikut_ujian.nilai DESC")->result();
 		$this->load->view("m_guru_tes_hasil_detil_cetak", $a);
 	}
 	/* == SISWA == */

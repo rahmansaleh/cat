@@ -1,9 +1,9 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $active_group 				= 'default';
 $active_record 				= TRUE;
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['hostname'] = '192.168.100.20';
+$db['default']['username'] = 'fitria';
+$db['default']['password'] = 'simrs1';
 $db['default']['database'] = 'rsudtana_cat';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';

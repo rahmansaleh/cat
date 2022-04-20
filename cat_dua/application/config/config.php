@@ -48,7 +48,7 @@ $config['tampil_nilai']		= TRUE; // jika siswa boleh melihat hasil ujian, isikan
 
 
 
-$config['base_url']			= $root;
+$config['base_url']			= 'https://rsudtanahabang.jakarta.go.id/cat/cat_dua/';
 
 
 $config['index_page'] 		= '';

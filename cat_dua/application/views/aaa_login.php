@@ -19,7 +19,7 @@
 
 		<div class="panel panel-default top150">
 			<div class="panel-heading text-center panel-relative">
-			<img src="<?php echo base_url(); ?>assets/img/rsudta-64.png" width="140px">
+			<img src="<?php echo base_url(); ?>assets/img/rsudta-64.png" width="240px">
 				<br>
 				<h4 style="margin: 5px; margin-top: 20px">Aplikasi Digital Computer Assisted Test RSUD Tanah Abang</h4>
 			</div>

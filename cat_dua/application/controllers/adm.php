@@ -1210,7 +1210,7 @@ class Adm extends CI_Controller {
 									INNER JOIN m_mapel b ON a.id_mapel = b.id
 									INNER JOIN m_guru c ON a.id_guru = c.id
 									LEFT JOIN tr_ikut_ujian d ON CONCAT('".$a['sess_konid']."',a.id) = CONCAT(d.id_user,d.id_tes)
-									WHERE b.nama = '".$this->session->userdata('jurusan_siswa')."'
+									WHERE b.nama = '".$this->session->userdata('jurusan_siswa')."' AND a.aktif = '1'
 									ORDER BY a.id ASC")->result();
 		//echo $this->db->last_query();
 		$a['p']	= "m_list_ujian_siswa";

@@ -1578,6 +1578,7 @@ class Adm extends CI_Controller {
 				if (!empty($det_user)) {
 					$sess_nama_user = $det_user->nama;
 					$sess_jurusan_user = $det_user->jurusan;
+					$this->db->query("INSERT INTO tr_siswa_login VALUES ('".$username."')");
 				}
 			} else if ($a_data->level == "guru") {
 				$det_user = $this->db->query("SELECT nama FROM m_guru WHERE id = '".$a_data->kon_id."'")->row();

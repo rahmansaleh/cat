@@ -15,39 +15,6 @@ $config['tgl']				= "27012017";
 $config['tampil_nilai']		= TRUE; // jika siswa boleh melihat hasil ujian, isikan TRUE, jika tidak FALSE, default TRUE
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $config['base_url']			= 'https://rsudtanahabang.jakarta.go.id/cat/cat_dua/';
 
 

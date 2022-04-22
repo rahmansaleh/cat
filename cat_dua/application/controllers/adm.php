@@ -929,7 +929,7 @@ class Adm extends CI_Controller {
 					$ket = "tambah";
 					$token = strtoupper(random_string('alpha', 5));
 
-					$this->db->query("INSERT INTO tr_guru_tes VALUES (
+					$this->db->query("INSERT INTO tr_guru_tes (id, id_guru, id_mapel, nama_ujian, jumlah_soal, waktu, jenis, detil_jenis, tgl_mulai, terlambat, token) VALUES (
 						null, 
 						'".$a['sess_konid']."', 
 						'".bersih($p,"mapel")."',

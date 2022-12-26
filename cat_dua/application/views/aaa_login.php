@@ -47,7 +47,7 @@
 </div> 
 
 <div class="ctr"> 
-	<!-- <a href="<?php echo base_url(); ?>adm"><?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi'); ?></a> -->
+	<!-- <a href="<?php echo base_url(); ?>Adm"><Ad?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi'); ?></a> -->
 </div>
 
 <script src="<?php echo base_url(); ?>___/js/jquery-1.11.3.min.js"></script> 

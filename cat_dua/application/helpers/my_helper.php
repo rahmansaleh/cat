@@ -210,9 +210,9 @@ function gen_menu() {
  
 		    foreach ($menu as $m) {
 		        if ($url == $m['url']) {
-		          echo '<a href="'.base_url().'adm/'.$m['url'].'" class="btn btn-sq btn-warning"><i class="glyphicon glyphicon-'.$m['icon'].' g3x"></i><br><br/>'.$m['text'].' </a>';
+		          echo '<a href="'.base_url().'Adm/'.$m['url'].'" class="btn btn-sq btn-warning"><i class="glyphicon glyphicon-'.$m['icon'].' g3x"></i><br><br/>'.$m['text'].' </a>';
 		        } else {
-		          echo '<a href="'.base_url().'adm/'.$m['url'].'" class="btn btn-sq btn-primary"><i class="glyphicon glyphicon-'.$m['icon'].' g3x"></i><br><br/>'.$m['text'].' </a>';
+		          echo '<a href="'.base_url().'Adm/'.$m['url'].'" class="btn btn-sq btn-primary"><i class="glyphicon glyphicon-'.$m['icon'].' g3x"></i><br><br/>'.$m['text'].' </a>';
 		        }
 		    }
 
@@ -225,6 +225,6 @@ function gen_menu() {
 
 function cek_hakakses($arr_yg_boleh_akses, $userid) {
 	if (!in_array($userid, $arr_yg_boleh_akses)) {
-		redirect('adm');
+		redirect('Adm');
 	}
 }		

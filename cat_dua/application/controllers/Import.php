@@ -10,7 +10,7 @@ class Import extends CI_Controller {
 	
 	public function cek_aktif() {
 		if ($this->session->userdata('admin_valid') == false && $this->session->userdata('admin_id') == "") {
-			redirect('adm/login');
+			redirect('Adm/login');
 		} 
 	}
 
@@ -57,7 +57,7 @@ class Import extends CI_Controller {
         } else {
             exit('Bukan File Excel...');//pesan error tipe file tidak tepat
         }
-        redirect('adm/m_siswa');
+        redirect('Adm/m_siswa');
 	}
 
 	public function guru() {
@@ -102,7 +102,7 @@ class Import extends CI_Controller {
         } else {
             exit('Bukan File Excel...');//pesan error tipe file tidak tepat
         }
-        redirect('adm/m_guru');
+        redirect('Adm/m_guru');
 	}
 
     public function soal() {
@@ -122,15 +122,14 @@ class Import extends CI_Controller {
         if($file[$length -1] == 'xlsx' || $file[$length -1] == 'xls') {
 
             $tmp    = './upload/temp/'.$_FILES['import_excel']['name'];
-            //Baca dari tmp folder jadi file ga perlu jadi sampah di server :-p
-            
-            $this->load->library('excel');//Load library excelnya
+            $this->load->library('Excel');//Load library excelnya
             $read   = PHPExcel_IOFactory::createReaderForFile($tmp);
             $read->setReadDataOnly(true);
             $excel  = $read->load($tmp);
-    
-            $_sheet = $excel->setActiveSheetIndexByName('data');
             
+            //Baca dari tmp folder jadi file ga perlu jadi sampah di server :-p
+            $_sheet = $excel->setActiveSheetIndexByName('data');
+            echo "aaa";
             $data = array();
             for ($j = $idx_baris_mulai; $j <= $idx_baris_selesai; $j++) {
                 $bobot = $_sheet->getCell("A".$j)->getCalculatedValue();
@@ -147,6 +146,8 @@ class Import extends CI_Controller {
                 }
             }
 
+            echo "aaaa";
+
             $strq = "INSERT INTO m_soal (id_guru, id_mapel, bobot, soal, opsi_a, opsi_b, opsi_c, opsi_d, opsi_e, jawaban, tgl_input, jml_benar, jml_salah) VALUES ";
            
             $strq .= implode(",", $data).";";
@@ -157,7 +158,7 @@ class Import extends CI_Controller {
         } else {
             exit('Bukan File Excel...');//pesan error tipe file tidak tepat
         }
-        redirect('adm/m_soal');
+        redirect('Adm/m_soal');
     }
 	
 }

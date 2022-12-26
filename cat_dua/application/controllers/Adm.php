@@ -18,7 +18,7 @@ class Adm extends CI_Controller {
 
 	public function cek_aktif() {
 		if ($this->session->userdata('admin_valid') == false && $this->session->userdata('admin_id') == "") {
-			redirect('adm/login');
+			redirect('Adm/login');
 		} 
 	}
 	
@@ -537,7 +537,7 @@ class Adm extends CI_Controller {
 			$nama_gambar = $this->db->query("SELECT file FROM m_soal WHERE id = '".$uri5."'")->row();
 			$this->db->query("UPDATE m_soal SET file = '', tipe_file = '' WHERE id = '".$uri5."'");
 			@unlink("./upload/gambar_soal/".$nama_gambar->file);
-			redirect('adm/m_soal/pilih_mapel/'.$uri4);
+			redirect('Adm/m_soal/pilih_mapel/'.$uri4);
 		} else if ($uri3 == "pilih_mapel") {
 			if ($a['sess_level'] == "guru") {
 				$a['data'] = $this->db->query("SELECT m_soal.*, m_guru.nama AS nama_guru FROM m_soal INNER JOIN m_guru ON m_soal.id_guru = m_guru.id WHERE m_soal.id_guru = '".$a['sess_konid']."' AND m_soal.id_mapel = '$uri4' ORDER BY id DESC")->result();
@@ -670,7 +670,7 @@ class Adm extends CI_Controller {
 			}
 			$this->session->set_flashdata('k', '<div class="alert alert-info">'.$teks_gagal.'</div>');
 			
-			redirect('adm/m_soal/pilih_mapel/'.$p['id_mapel']);
+			redirect('Adm/m_soal/pilih_mapel/'.$p['id_mapel']);
 		} else if ($uri3 == "edit") {
 			$a['opsij'] = array(""=>"Jawaban","A"=>"A","B"=>"B","C"=>"C","D"=>"D","E"=>"E");
 			
@@ -717,7 +717,7 @@ class Adm extends CI_Controller {
 			@unlink("./upload/gambar_soal/".$pc_opsi_d[0]);
 			@unlink("./upload/gambar_soal/".$pc_opsi_e[0]);
 			
-			redirect('adm/m_soal/pilih_mapel/'.$nama_gambar->id_mapel);
+			redirect('Adm/m_soal/pilih_mapel/'.$nama_gambar->id_mapel);
 		} else if ($uri3 == "cetak") {
 			$html = "<link href='".base_url()."___/css/style_print.css' rel='stylesheet' media='' type='text/css'/>";
 			if ($a['sess_level'] == "admin") {
@@ -815,8 +815,8 @@ class Adm extends CI_Controller {
 				$data_ok[2] = $d['nmmapel'].'<br>'.$d['nmguru'];
 				$data_ok[3] = "Jml dipakai : ".($total)."<br>Benar: ".$jml_salah.", Salah: ".$jml_salah."<br>Persentase benar : ".number_format($persen_benar)." %";
 				$data_ok[4] = '<div class="btn-group">
-				  <a href="'.base_url().'adm/m_soal/edit/'.$d['id'].'" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-pencil" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Edit</a>
-				  <a href="'.base_url().'adm/m_soal/hapus/'.$d['id'].'" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Hapus</a>
+				  <a href="'.base_url().'Adm/m_soal/edit/'.$d['id'].'" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-pencil" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Edit</a>
+				  <a href="'.base_url().'Adm/m_soal/hapus/'.$d['id'].'" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Hapus</a>
 				 ';
 
 		            	$data[] = $data_ok;
@@ -1091,7 +1091,7 @@ class Adm extends CI_Controller {
 	            $data_ok[2] = $d['jml_benar'];
 	            $data_ok[3] = $d['nilai'];
 	            $data_ok[4] = $d['nilai_bobot'];
-	            $data_ok[5] = '<a href="'.base_url().'adm/h_ujian/batalkan_ujian/'.$d['id'].'/'.$this->uri->segment(4).'" class="btn btn-danger btn-xs" onclick="return confirm(\'Anda yakin...?\');"><i class="glyphicon glyphicon-remove" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Batalkan Ujian</a>';
+	            $data_ok[5] = '<a href="'.base_url().'Adm/h_ujian/batalkan_ujian/'.$d['id'].'/'.$this->uri->segment(4).'" class="btn btn-danger btn-xs" onclick="return confirm(\'Anda yakin...?\');"><i class="glyphicon glyphicon-remove" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Batalkan Ujian</a>';
 
 	            $data[] = $data_ok;
 	        }
@@ -1106,7 +1106,7 @@ class Adm extends CI_Controller {
 	        exit;
 		} else if ($uri3 == "batalkan_ujian") {
 			$this->db->query("DELETE FROM tr_ikut_ujian WHERE id = '$uri4'");
-			redirect('adm/h_ujian/det/'.$uri5);
+			redirect('Adm/h_ujian/det/'.$uri5);
 		} else if ($uri3 == "data") {
 			$start = $this->input->post('start');
 	        $length = $this->input->post('length');
@@ -1136,7 +1136,7 @@ class Adm extends CI_Controller {
 	            $data_ok[3] = $d['mapel'];
 	            $data_ok[4] = $d['jumlah_soal'];
 	            $data_ok[5] = $d['waktu']." menit";
-	            $data_ok[6] = '<a href="'.base_url().'adm/h_ujian/det/'.$d['id'].'" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-search" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Lihat Hasil</a>
+	            $data_ok[6] = '<a href="'.base_url().'Adm/h_ujian/det/'.$d['id'].'" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-search" style="margin-left: 0px; color: #fff"></i> &nbsp;&nbsp;Lihat Hasil</a>
                          ';
 
 	            $data[] = $data_ok;
@@ -1342,7 +1342,7 @@ class Adm extends CI_Controller {
 				$a['p']	= "m_token";
 				$this->load->view('aaa', $a);
 			} else {
-				redirect('adm/ikuti_ujian');
+				redirect('Adm/ikuti_ujian');
 			}
 		} else {
 			
@@ -1469,7 +1469,7 @@ class Adm extends CI_Controller {
 
 				$this->load->view('v_ujian', $a);
 			} else {
-				redirect('adm/sudah_selesai_ujian/'.$uri4);
+				redirect('Adm/sudah_selesai_ujian/'.$uri4);
 			}
 		}
 
@@ -1540,7 +1540,7 @@ class Adm extends CI_Controller {
 		
 		$q_nilai = $this->db->query("SELECT nilai, tgl_selesai FROM tr_ikut_ujian WHERE id_tes = $uri3 AND id_user = '".$a['sess_konid']."' AND status = 'N'")->row();
 		if (empty($q_nilai)) {
-			redirect('adm/ikut_ujian/_/'.$uri3);
+			redirect('Adm/ikut_ujian/_/'.$uri3);
 		} else {
 			
 			$a['p'] = "v_selesai_ujian";
@@ -1620,7 +1620,7 @@ class Adm extends CI_Controller {
 					'admin_valid' 	=> false
                     );
         $this->session->set_userdata($data);
-		redirect('adm');
+		redirect('Adm');
 	}
 	//fungsi tambahan
 	public function get_akhir($tabel, $field, $kode_awal, $pad) {

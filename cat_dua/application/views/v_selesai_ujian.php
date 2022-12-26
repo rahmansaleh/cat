@@ -4,7 +4,7 @@
 		<div class="panel-body">
 		<?php echo $data; ?>
 
-		<a href="<?php echo base_url(); ?>adm/ikuti_ujian">Kembali</a>
+		<a href="<?php echo base_url(); ?>Adm/ikuti_ujian">Kembali</a>
 		</div>
 	</div>
 </div>

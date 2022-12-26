@@ -34,7 +34,7 @@
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('admin_nama')." (".$this->session->userdata('admin_user').")"; ?> <span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
                         <li><a href="#" onclick="return rubah_password();">Ubah Password</a></li>
-                        <li><a href="<?php echo base_url(); ?>adm/logout" onclick="return confirm('keluar..?');">Logout</a></li>
+                        <li><a href="<?php echo base_url(); ?>Adm/logout" onclick="return confirm('keluar..?');">Logout</a></li>
                      </ul>
                   </li>
                </ul>
@@ -48,7 +48,7 @@
    </div>
 
    <div class="col-md-12 footer">
-     <a href="<?php echo base_url(); ?>adm"><?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi')."</a><br> Waktu Server: ".tjs(date('Y-m-d H:i:s'),"s")." - Waktu Database: ".tjs($this->waktu_sql,"s"); ?>. 
+     <a href="<?php echo base_url(); ?>Adm"><?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi')."</a><br> Waktu Server: ".tjs(date('Y-m-d H:i:s'),"s")." - Waktu Database: ".tjs($this->waktu_sql,"s"); ?>. 
    </div>
 
 <!-- insert modal -->

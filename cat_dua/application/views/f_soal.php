@@ -2,7 +2,7 @@
   <div class="panel panel-info">
     <div class="panel-heading">Input Soal</div>
     <div class="panel-body">
-      <?php echo form_open_multipart(base_url()."adm/m_soal/simpan", "class='form-horizontal'"); ?>
+      <?php echo form_open_multipart(base_url()."Adm/m_soal/simpan", "class='form-horizontal'"); ?>
           <input type="hidden" name="id" id="id" value="<?php echo $d['id']; ?>">
           <input type="hidden" name="mode" id="mode" value="<?php echo $d['mode']; ?>">
           <div id="konfirmasi"></div>
@@ -75,7 +75,7 @@
             <div class="form-group" style="margin-top: 20px">
               <div class="col-md-12">
                 <button type="submit" class="btn btn-info"><i class="fa fa-check"></i> Simpan</button>
-                <a href="<?php echo base_url(); ?>adm/m_soal/pilih_mapel/<?php echo $d['id_mapel']; ?>" class="btn btn-default"><i class="fa fa-minus-circle"></i> Kembali</a>
+                <a href="<?php echo base_url(); ?>Adm/m_soal/pilih_mapel/<?php echo $d['id_mapel']; ?>" class="btn btn-default"><i class="fa fa-minus-circle"></i> Kembali</a>
               </div>
             </div>
       </form>

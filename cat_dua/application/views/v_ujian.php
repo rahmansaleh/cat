@@ -113,7 +113,7 @@
 <div class="ajax-loading"><i class="fa fa-spin fa-spinner"></i> Loading ...</div>
 <!--
 <div class="col-md-12 footer">
- <a href="<?php echo base_url(); ?>adm"><?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi')."</a><br> Waktu Server: ".tjs(date('Y-m-d H:i:s'),"s")." - Waktu Database: ".tjs($this->waktu_sql,"s"); ?>. 
+ <a href="<?php echo base_url(); ?>Adm"><?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi')."</a><br> Waktu Server: ".tjs(date('Y-m-d H:i:s'),"s")." - Waktu Database: ".tjs($this->waktu_sql,"s"); ?>. 
 </div>
 -->
 
@@ -205,7 +205,7 @@
         
         $.ajax({    
             type: "POST",
-            url: base_url+"adm/ikut_ujian/simpan_satu/"+id_tes,
+            url: base_url+"Adm/ikut_ujian/simpan_satu/"+id_tes,
             data: JSON.stringify(form),
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
@@ -263,7 +263,7 @@
         var f_asal  = $("#_form");
         var form  = getFormData(f_asal);
         simpan_akhir(id_tes);
-        window.location.assign("<?php echo base_url(); ?>adm/sudah_selesai_ujian/"+id_tes); 
+        window.location.assign("<?php echo base_url(); ?>Adm/sudah_selesai_ujian/"+id_tes); 
           
         return false;
     }
@@ -393,13 +393,13 @@
             simpan();
             $.ajax({
                 type: "GET",
-                url: base_url+"adm/ikut_ujian/simpan_akhir/"+id_tes,
+                url: base_url+"Adm/ikut_ujian/simpan_akhir/"+id_tes,
                 beforeSend: function() {
                     $('.ajax-loading').show();    
                 },
                 success: function(r) {
                     if(r.status == "ok") {
-                        window.location.assign("<?php echo base_url(); ?>adm/sudah_selesai_ujian/"+id_tes); 
+                        window.location.assign("<?php echo base_url(); ?>Adm/sudah_selesai_ujian/"+id_tes); 
                     }
                 }
             });

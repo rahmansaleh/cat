@@ -129,7 +129,6 @@ class Import extends CI_Controller {
             
             //Baca dari tmp folder jadi file ga perlu jadi sampah di server :-p
             $_sheet = $excel->setActiveSheetIndexByName('data');
-            echo "aaa";
             $data = array();
             for ($j = $idx_baris_mulai; $j <= $idx_baris_selesai; $j++) {
                 $bobot = $_sheet->getCell("A".$j)->getCalculatedValue();
@@ -146,13 +145,10 @@ class Import extends CI_Controller {
                 }
             }
 
-            echo "aaaa";
 
             $strq = "INSERT INTO m_soal (id_guru, id_mapel, bobot, soal, opsi_a, opsi_b, opsi_c, opsi_d, opsi_e, jawaban, tgl_input, jml_benar, jml_salah) VALUES ";
            
             $strq .= implode(",", $data).";";
-            //echo $strq;
-            //exit;
 
             $this->db->query($strq);
         } else {

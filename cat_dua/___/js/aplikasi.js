@@ -128,6 +128,7 @@ function pagination(indentifier, url, config) {
         "language": {
             "url": base_url+"___/plugin/datatables/Indonesian.json"
         },
+		"pageLength": "100",
         "ordering": false,
         "columnDefs": config,
         "bProcessing": true,

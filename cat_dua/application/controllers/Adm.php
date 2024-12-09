@@ -7,7 +7,7 @@ class Adm extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-		$this->load->helper('url');
+		// $this->load->helper('url');
         $this->db->query("SET time_zone='+7:00'");
         $waktu_sql = $this->db->query("SELECT NOW() AS waktu")->row_array();
         $this->waktu_sql = $waktu_sql['waktu'];

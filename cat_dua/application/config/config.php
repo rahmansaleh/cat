@@ -12,10 +12,11 @@ $config['editor_style']		= "replace";	//pilihannya "inline" atau "replace";
 $config['nama_aplikasi']	= "RSUD TA - CAT";
 $config['versi']			= "2.0";
 $config['tgl']				= "27012017";
-$config['tampil_nilai']		= TRUE; // jika siswa boleh melihat hasil ujian, isikan TRUE, jika tidak FALSE, default TRUE
+$config['tampil_nilai']		= FALSE; // jika siswa boleh melihat hasil ujian, isikan TRUE, jika tidak FALSE, default TRUE
 
 
-$config['base_url']			= 'http://192.168.100.30/cat/cat_dua/';
+// $config['base_url']			= 'https://rsudtanahabang.jakarta.go.id/cat/';
+$config['base_url']			= 'http://192.168.100.80:8014/';
 
 
 $config['index_page'] 		= '';

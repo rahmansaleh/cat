@@ -2394,12 +2394,12 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 	 *		 |	 A	  |	  B	 |
 	 *   +-----+------------+------------+
 	 *   |	 |(x1,y1)	 |			|
-	 *   |  1  |(A1)._______|______	  |
+	 *   |  1  |(A1).assetsassets_|assetsassets	  |
 	 *   |	 |	|			  |	 |
 	 *   |	 |	|			  |	 |
 	 *   +-----+----|	BITMAP	|-----+
 	 *   |	 |	|			  |	 |
-	 *   |  2  |	|______________.	 |
+	 *   |  2  |	|assetsassetsassetsassets__.	 |
 	 *   |	 |			|		(B2)|
 	 *   |	 |			|	 (x2,y2)|
 	 *   +---- +------------+------------+

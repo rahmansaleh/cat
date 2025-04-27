@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Laporan Hasil Ujian</title>
-  <link href='<?php echo base_url(); ?>___/css/style_print.css' rel='stylesheet' media='' type='text/css'/>
+  <link href='<?php echo base_url(); ?>assets/css/style_print.css' rel='stylesheet' media='' type='text/css'/>
 </head>
 <body>
 

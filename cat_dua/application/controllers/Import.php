@@ -52,6 +52,7 @@ class Import extends CI_Controller {
             $strq = "INSERT INTO m_siswa (nim, nama, jurusan) VALUES ";
            
             $strq .= implode(",", $data).";";
+            var_dump($strq);exit;
             
             $this->db->query($strq);
         } else {

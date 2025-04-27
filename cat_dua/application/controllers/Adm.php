@@ -724,7 +724,7 @@ class Adm extends CI_Controller {
 			
 			redirect('Adm/m_soal/pilih_mapel/'.$nama_gambar->id_mapel);
 		} else if ($uri3 == "cetak") {
-			$html = "<link href='".base_url()."___/css/style_print.css' rel='stylesheet' media='' type='text/css'/>";
+			$html = "<link href='".base_url()."assets/css/style_print.css' rel='stylesheet' media='' type='text/css'/>";
 			if ($a['sess_level'] == "admin") {
 				$data = $this->db->query("SELECT * FROM m_soal")->result();
 			} else {
@@ -1203,7 +1203,6 @@ class Adm extends CI_Controller {
 		$p = json_decode(file_get_contents('php://input'));
 		//return as json
 		$jeson = array();
-		//$a['sess_konid']
 		$a['data'] = $this->db->query("SELECT 
 									a.id, a.nama_ujian, a.jumlah_soal, a.waktu,
 									b.nama nmmapel,
@@ -1217,7 +1216,7 @@ class Adm extends CI_Controller {
 									LEFT JOIN tr_ikut_ujian d ON CONCAT('".$a['sess_konid']."',a.id) = CONCAT(d.id_user,d.id_tes)
 									WHERE b.nama = '".$this->session->userdata('jurusan_siswa')."' AND a.aktif = '1'
 									ORDER BY a.id ASC")->result();
-		//echo $this->db->last_query();
+		// echo $this->db->last_query();
 		$a['p']	= "m_list_ujian_siswa";
 		$this->load->view('aaa', $a);
 	}

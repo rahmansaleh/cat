@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="Aplikasi Ujian Online berbasis web. Lebih Mudah dan Hemat, kayak AlfaMart">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link href="<?php echo base_url(); ?>___/css/bootstrap.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>___/css/style.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -50,12 +50,12 @@
 	<!-- <a href="<?php echo base_url(); ?>Adm"><Ad?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi'); ?></a> -->
 </div>
 
-<script src="<?php echo base_url(); ?>___/js/jquery-1.11.3.min.js"></script> 
-<script src="<?php echo base_url(); ?>___/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"></script> 
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 <script type="text/javascript">
 	base_url = "<?php echo base_url(); ?>";
 	uri_js = "<?php echo $this->config->item('uri_js'); ?>";
 </script>
-<script src="<?php echo base_url(); ?>___/js/aplikasi.js"></script> 
+<script src="<?php echo base_url(); ?>assets/js/aplikasi.js"></script> 
 </body>
 </html>

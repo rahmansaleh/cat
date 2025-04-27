@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	console.log("hereeee");
 	$('.gambar').each(function(){
 		var url = $(this).attr("src");
 		$(this).zoom({url: url});
@@ -8,7 +9,7 @@ $(document).ready(function() {
 	var url = get_url(parseInt(uri_js));
 	var url2 = get_url((parseInt(uri_js)+1));
 	var url3 = get_url((parseInt(uri_js)+2));
-	//console.log(url);
+	console.log("url nyaaa "+url);
 
 	if (url == "m_siswa") {
 		pagination("datatabel", base_url+"Adm/m_siswa/data", []);
@@ -49,6 +50,7 @@ $(document).ready(function() {
 			pagination("datatabel", base_url+"Adm/m_ujian/data", []);	
 		}
 	} else if (url == "ikut_ujian") {
+		
 		if (url2 == "token") {
 			timer();
 		} 
@@ -126,7 +128,7 @@ function getFormData($form){
 function pagination(indentifier, url, config) {
     $('#'+indentifier).DataTable({
         "language": {
-            "url": base_url+"___/plugin/datatables/Indonesian.json"
+            "url": base_url+"assets/plugin/datatables/Indonesian.json"
         },
 		"pageLength": "100",
         "ordering": false,

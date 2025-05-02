@@ -165,7 +165,7 @@ class Import extends CI_Controller {
         $str = preg_replace('/[^\x20-\x7E\x0A\x0D\x09\xC0-\xFF]/u', '', $str); // Hapus karakter tidak lazim (non-printable & non-UTF-8)
     
         // Tambahan (opsional): Hapus simbol yang tidak umum
-        $str = preg_replace('/[^\p{L}\p{N}\p{P}\p{Zs}]/u', '', $str); // Hanya huruf, angka, tanda baca, dan spasi
+        // $str = preg_replace('/[^\p{L}\p{N}\p{P}\p{Zs}]/u', '', $str); // Hanya huruf, angka, tanda baca, dan spasi
     
         return $str;
     }

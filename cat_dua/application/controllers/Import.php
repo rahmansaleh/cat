@@ -52,6 +52,7 @@ class Import extends CI_Controller {
             $strq = "INSERT INTO m_siswa (nim, nama, jurusan) VALUES ";
            
             $strq .= implode(",", $data).";";
+            var_dump($strq);exit;
             
             $this->db->query($strq);
         } else {
@@ -132,7 +133,7 @@ class Import extends CI_Controller {
             $data = array();
             for ($j = $idx_baris_mulai; $j <= $idx_baris_selesai; $j++) {
                 $bobot = $_sheet->getCell("A".$j)->getCalculatedValue();
-                $soal = $_sheet->getCell("B".$j)->getCalculatedValue();
+                $soal = $this->cleanString($_sheet->getCell("B".$j)->getCalculatedValue());
                 $opsi_a = $_sheet->getCell("C".$j)->getCalculatedValue();
                 $opsi_b = $_sheet->getCell("D".$j)->getCalculatedValue();
                 $opsi_c = $_sheet->getCell("E".$j)->getCalculatedValue();
@@ -149,12 +150,24 @@ class Import extends CI_Controller {
             $strq = "INSERT INTO m_soal (id_guru, id_mapel, bobot, soal, opsi_a, opsi_b, opsi_c, opsi_d, opsi_e, jawaban, tgl_input, jml_benar, jml_salah) VALUES ";
            
             $strq .= implode(",", $data).";";
+            var_dump($strq);exit;
 
             $this->db->query($strq);
         } else {
             exit('Bukan File Excel...');//pesan error tipe file tidak tepat
         }
         redirect('Adm/m_soal');
+    }
+
+    private function cleanString($str) {
+        // Hapus karakter non-UTF-8 (termasuk karakter rusak seperti \xCB\x9A)
+        $str = mb_convert_encoding($str, 'UTF-8', 'UTF-8'); // Perbaikan encoding
+        $str = preg_replace('/[^\x20-\x7E\x0A\x0D\x09\xC0-\xFF]/u', '', $str); // Hapus karakter tidak lazim (non-printable & non-UTF-8)
+    
+        // Tambahan (opsional): Hapus simbol yang tidak umum
+        // $str = preg_replace('/[^\p{L}\p{N}\p{P}\p{Zs}]/u', '', $str); // Hanya huruf, angka, tanda baca, dan spasi
+    
+        return $str;
     }
 	
 }

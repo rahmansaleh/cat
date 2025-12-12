@@ -5,8 +5,8 @@
 <title>Dashboard - <?php echo $this->config->item('nama_aplikasi')." ".$this->config->item('versi'); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link href="<?php echo base_url(); ?>___/css/bootstrap.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>___/css/style.css?<?php echo time(); ?>" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/style.css?<?php echo time(); ?>" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <style type="text/css">
@@ -19,7 +19,7 @@
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: url(<?php echo base_url('___/img/facebook.gif'); ?>) center no-repeat #fff;
+        background: url(<?php echo base_url('assets/img/facebook.gif'); ?>) center no-repeat #fff;
     }
 
     .ajax-loading {
@@ -118,10 +118,10 @@
 -->
 
 
-<script src="<?php echo base_url(); ?>___/js/jquery-1.11.3.min.js"></script> 
-<script src="<?php echo base_url(); ?>___/js/bootstrap.js"></script>
-<script src="<?php echo base_url(); ?>___/plugin/countdown/jquery.countdownTimer.js"></script> 
-<script src="<?php echo base_url(); ?>___/plugin/jquery_zoom/jquery.zoom.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.11.3.min.js"></script> 
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugin/countdown/jquery.countdownTimer.js"></script> 
+<script src="<?php echo base_url(); ?>assets/plugin/jquery_zoom/jquery.zoom.min.js"></script>
 
 <script type="text/javascript">
     var base_url = "<?php echo base_url(); ?>";

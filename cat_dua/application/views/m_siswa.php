@@ -2,6 +2,7 @@
   <div class="panel panel-info">
     <div class="panel-heading">Data Pelamar
       <div class="tombol-kanan">
+        <a class="btn btn-danger btn-sm tombol-kanan" href="<?php echo base_url(); ?>Adm/m_siswa/aktifkan_semua"><i class="glyphicon glyphicon-plus"></i> &nbsp;&nbsp;Aktifkan Semua</a>        
         <a class="btn btn-success btn-sm tombol-kanan" href="#" onclick="return m_siswa_e(0);"><i class="glyphicon glyphicon-plus"></i> &nbsp;&nbsp;Tambah</a>        
         <a class="btn btn-warning btn-sm tombol-kanan" href="<?php echo base_url(); ?>upload/format_import_siswa.xlsx" ><i class="glyphicon glyphicon-download"></i> &nbsp;&nbsp;Download Format Import</a>
         <a class="btn btn-info btn-sm tombol-kanan" href="<?php echo base_url(); ?>Adm/m_siswa/import" ><i class="glyphicon glyphicon-upload"></i> &nbsp;&nbsp;Import</a>
